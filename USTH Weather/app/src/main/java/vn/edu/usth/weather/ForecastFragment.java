@@ -18,9 +18,8 @@ public class ForecastFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
 
-        ImageView imageView = view.findViewById(R.id.weather_icon);
-        TextView textView = view.findViewById(R.id.text_day);
-        view.setBackgroundColor(0x20FF0000);
+        ImageView imageView = view.findViewById(R.id.icon1);
+        TextView textView = view.findViewById(R.id.day2);
 
 
         return view;
