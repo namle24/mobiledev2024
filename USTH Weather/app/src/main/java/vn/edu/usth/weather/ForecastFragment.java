@@ -19,7 +19,7 @@ public class ForecastFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
 
         ImageView imageView = view.findViewById(R.id.icon1);
-        TextView textView = view.findViewById(R.id.day2);
+        TextView textView = view.findViewById(R.id.day1);
 
 
         return view;
