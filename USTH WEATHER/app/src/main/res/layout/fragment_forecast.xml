@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Header Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:background="#2243b6"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="USTH WEATHER"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="left|center" />
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@null"
+            android:contentDescription="refresh"
+            android:src="@drawable/refresh1"
+            app:tint="@android:color/white"
+            android:layout_marginEnd="12dp" />
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@null"
+            android:contentDescription="settings"
+            android:src="@drawable/seting1"
+            app:tint="@android:color/white"
+            android:layout_marginEnd="12dp" />
+    </LinearLayout>
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:background="#b9bfff"
+        android:padding="12dp">
+
+        <!-- Repeated structure for each day -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:id="@+id/weather_icon"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/text_day"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/rain1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cool \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Repeated structure for each day -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/sun1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot \n 32C - 34C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Repeat the LinearLayout blocks for each day as per your code -->
+        <!-- Example for Wed, Thur, Fri, Sat, Sun continues below... -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/lightsun"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warm \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Thur -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Thur"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/sun1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Friday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Frid"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/cloud1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <!-- Continue for Saturday and Sunday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Frid"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/cloud1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="9dp">
+
+            <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:text="Frid"
+                android:textSize="22sp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/cloud1"
+                android:padding="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot \n 22C - 31C"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
