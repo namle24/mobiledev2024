@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 public class ForecastFragment extends Fragment {
 
     ImageButton refresh;
+    ImageButton setting;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -30,6 +31,14 @@ public class ForecastFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "Refresh", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        setting = (ImageButton) view.findViewById(R.id.setting);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Open App's Setiting", Toast.LENGTH_SHORT).show();
             }
         });
 

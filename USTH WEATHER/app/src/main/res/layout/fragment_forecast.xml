@@ -31,9 +31,9 @@
         <ImageButton
             android:id="@+id/refresh"
             android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_height="72dp"
             android:layout_marginLeft="22dp"
-            android:background="@null"
+            android:background="@drawable/ripple_effect"
             android:contentDescription="refresh"
             android:src="@drawable/refresh1"
             app:tint="@android:color/white" />
@@ -41,9 +41,9 @@
         <ImageButton
             android:id="@+id/setting"
             android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_height="72dp"
             android:layout_marginLeft="12dp"
-            android:background="@null"
+            android:background="@drawable/ripple_effect"
             android:contentDescription="settings"
             android:src="@drawable/seting1"
             app:tint="@android:color/white" />

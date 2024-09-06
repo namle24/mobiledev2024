@@ -19,7 +19,6 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        setContentView(R.layout.fragment_forecast);
         Log.i(TAG, "onCreate called");
 
         ForecastFragment firstFragment = new ForecastFragment();
