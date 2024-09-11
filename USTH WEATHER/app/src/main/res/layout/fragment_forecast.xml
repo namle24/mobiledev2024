@@ -9,13 +9,13 @@
 
     android:orientation="vertical">
 
+
     <!-- Header Area -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#2243b6"
-        android:layout_marginBottom="160dp"
         android:gravity="center_vertical">
 
         <TextView
@@ -96,7 +96,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="@drawable/uv"
             android:layout_marginBottom="9dp">
 
             <TextView

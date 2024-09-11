@@ -1,6 +1,5 @@
 package vn.edu.usth.weather;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,26 +7,38 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
+import vn.edu.usth.weather.adapter.HomeFragmentPagerAdapter;
+
 
 public class WeatherActivity extends AppCompatActivity {
 
-    ImageButton refresh;
     private static final String TAG = "WeatherActivity";
+    private TabLayout mTablayout;
+    private ViewPager mViewPager;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        Log.i(TAG, "onCreate called");
 
-        ForecastFragment firstFragment = new ForecastFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
+        mTablayout = findViewById(R.id.tab_layout);
+        mViewPager = findViewById(R.id.viewpager);
 
-        WeatherFragment secondFragment = new WeatherFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, secondFragment).commit();
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        mViewPager.setAdapter(adapter);
 
+        mTablayout.setupWithViewPager(mViewPager);
     }
+
 
     @Override
     protected void onStart() {

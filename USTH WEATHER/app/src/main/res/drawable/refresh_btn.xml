@@ -3,6 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <stroke android:color="#330066" android:width="5dp"/>
+    <stroke android:color="#330066" android:width="2dp"/>
     <corners android:radius="10dp"/>
 </shape>

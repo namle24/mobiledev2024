@@ -45,5 +45,4 @@ public class ForecastFragment extends Fragment {
         return view;
     }
 
-
 }
