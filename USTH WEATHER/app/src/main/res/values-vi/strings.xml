@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">USTH Thời Tiết</string>
+    <string name="cloudy">Mây</string>
+    <string name="hanoi">Hà Nội</string>
+    <string name="mon">Thứ Hai</string>
+    <string name="tue">Thứ Ba</string>
+    <string name="wed">Thứ Tư</string>
+    <string name="thu">Thứ Năm</string>
+    <string name="frid">Thứ Sáu</string>
+    <string name="sat">Thứ Sáu</string>
+    <string name="sun">Thứ Sáu</string>
+    <string name="cool_dest">Mát \n 22C - 31C</string>
+    <string name="super_hot">Rất Nóng \n 32C - 34C</string>
+    <string name="warm">Ấm \n 22C - 31C</string>
+    <string name="strong_wind">Gió Mạnh \n 22C - 29C</string>
+    <string name="scatter_thuderstorms">Có Sấm Chớp \n 20C - 38C</string>
+    <string name="heavy_rain">Mưa Lớn \n 22C - 31C</string>
+</resources>
