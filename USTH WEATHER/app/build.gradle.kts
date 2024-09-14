@@ -1,3 +1,5 @@
+import java.util.regex.Pattern.compile
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -50,7 +52,7 @@ android {
 }
 
 dependencies {
-
+    compile ("com.android.support:multidex:1.0.0")
     implementation (libs.appcompat)
     implementation (libs.material)
     implementation (libs.activity)

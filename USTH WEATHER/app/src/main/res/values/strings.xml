@@ -15,4 +15,5 @@
     <string name="strong_wind">Strong wind \n 22C - 29C</string>
     <string name="scatter_thuderstorms">Scatter Thuderstorms \n 20C - 38C</string>
     <string name="heavy_rain">Heavy Rain \n 22C - 31C</string>
+    <string name="hot">Hot \n 22C - 31C</string>
 </resources>

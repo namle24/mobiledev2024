@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/weather_fragment"
+    android:background="@drawable/poster_view"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="10dp"
     tools:context=".WeatherFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:background="@drawable/poster_view"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,6 +32,4 @@
             android:layout_marginRight="4dp"
             android:text="Paris"
             android:textSize="24sp" />
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

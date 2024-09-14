@@ -26,22 +26,6 @@ public class ForecastFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
 
-        refresh = (ImageButton) view.findViewById(R.id.refresh);
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Refresh", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        setting = (ImageButton) view.findViewById(R.id.setting);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Open App's Setiting", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         return view;
     }
 

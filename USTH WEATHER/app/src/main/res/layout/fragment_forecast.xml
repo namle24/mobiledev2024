@@ -5,60 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
+    android:layout_height="wrap_content"
+    android:id="@+id/forecast_fragment"
     android:orientation="vertical">
-
-
-    <!-- Header Area -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#2243b6"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="4dp"
-            android:text="@string/app_name"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:gravity="left|center" />
-
-        <ImageButton
-            android:id="@+id/refresh"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="22dp"
-            android:background="@drawable/ripple_effect"
-            android:contentDescription="refresh"
-            android:src="@drawable/refresh1"
-            app:tint="@android:color/white" />
-
-        <ImageButton
-            android:id="@+id/setting"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/ripple_effect"
-            android:contentDescription="settings"
-            android:src="@drawable/seting1"
-            app:tint="@android:color/white" />
-    </LinearLayout>
-
-    <!-- Body -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="16dp"
-        android:background="@drawable/ba_color"
-        android:padding="2dp">
 
         <!-- Repeated structure for each day -->
         <LinearLayout
@@ -73,7 +22,7 @@
                 android:id="@+id/weather_icon"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Mon"
+                android:text="@string/mon"
                 android:gravity="center" />
 
             <ImageView
@@ -86,7 +35,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Cool \n 22C - 31C"
+                android:text="@string/cool_dest"
                 android:gravity="center"/>
         </LinearLayout>
 
@@ -101,7 +50,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Tue"
+                android:text="@string/tue"
                 android:gravity="center" />
 
             <ImageView
@@ -113,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Super Hot \n 32C - 34C"
+                android:text="@string/super_hot"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -130,7 +79,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Wed"
+                android:text="@string/wed"
                 android:gravity="center" />
 
             <ImageView
@@ -142,7 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Warm \n 22C - 31C"
+                android:text="@string/warm"
                 android:gravity="center"/>
         </LinearLayout>
 
@@ -157,7 +106,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Thu"
+                android:text="@string/thu"
                 android:gravity="center" />
 
             <ImageView
@@ -169,7 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Hot \n 22C - 31C"
+                android:text="@string/hot"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -185,7 +134,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Frid"
+                android:text="@string/frid"
                 android:gravity="center" />
 
             <ImageView
@@ -197,7 +146,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Strong wind \n 22C - 29C"
+                android:text="@string/strong_wind"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -213,7 +162,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Sat"
+                android:text="@string/sat"
                 android:gravity="center" />
 
             <ImageView
@@ -225,7 +174,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Scatter Thuderstorms \n 20C - 38C"
+                android:text="@string/scatter_thuderstorms"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -238,7 +187,7 @@
             <TextView
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Sun"
+                android:text="@string/sun"
                 android:gravity="center" />
 
             <ImageView
@@ -250,11 +199,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Heavy Rain \n 22C - 31C"
+                android:text="@string/heavy_rain"
                 android:gravity="center" />
         </LinearLayout>
-    </LinearLayout>
-
 
 
 </LinearLayout>
