@@ -35,4 +35,5 @@
             android:layout_marginRight="4dp"
             android:text="Paris"
             android:textSize="24sp" />
+
 </RelativeLayout>
