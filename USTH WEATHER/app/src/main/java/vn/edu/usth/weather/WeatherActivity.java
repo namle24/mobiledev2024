@@ -1,8 +1,13 @@
 package vn.edu.usth.weather;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -70,6 +75,38 @@ public class WeatherActivity extends AppCompatActivity {
             Log.e(TAG, "Error playing media file", e);
         }
 
+        AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
+
+            @Override
+            protected void onPreExecute() {
+                // Preparation before background task (like showing a progress bar, etc.)
+                Toast.makeText(WeatherActivity.this, "Starting network request...", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            protected Bitmap doInBackground(String... params) {
+                // Simulate network delay using sleep()
+                try {
+                    Thread.sleep(3000); // Simulating 3 seconds network request delay
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return null; // Simulate returning a null Bitmap as we're not loading an actual image here
+            }
+
+            @Override
+            protected void onProgressUpdate(Integer... values) {
+                // This could update a progress bar, but here it's left as a placeholder
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                // Task completion: show a toast message
+                Toast.makeText(WeatherActivity.this, "Network request completed!", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        task.execute("http://ict.usth.edu.vn/wp-content/uploads/usth/usthlogo.png");
     }
 
     @Override
@@ -83,6 +120,34 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks
         int id = item.getItemId();
+
+        final Handler handler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message msg) {
+// This method is executed in main thread
+                String content = msg.getData().getString("server_response");
+                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        };
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+// this method is run in a worker thread
+                try {
+// wait for 5 seconds to simulate a long network access
+                    Thread.sleep(5000);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Bundle bundle = new Bundle();
+                bundle.putString("server_response", "some sample json here");
+                Message msg = new Message();
+                msg.setData(bundle);
+                handler.sendMessage(msg);
+            }
+        });
+        t.start();
 
         if (id == R.id.refresh) {
             // Show a toast when Refresh is clicked
