@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +8,17 @@
     android:id="@+id/forecast_fragment"
     android:orientation="vertical">
 
-        <!-- Repeated structure for each day -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/logo_image_view"
+        android:contentDescription="USTH Logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +48,6 @@
                 android:gravity="center"/>
         </LinearLayout>
 
-        <!-- Repeated structure for each day -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,9 +73,6 @@
                 android:text="@string/super_hot"
                 android:gravity="center" />
         </LinearLayout>
-
-        <!-- Repeat the LinearLayout blocks for each day as per your code -->
-        <!-- Example for Wed, Thur, Fri, Sat, Sun continues below... -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,7 +100,6 @@
                 android:gravity="center"/>
         </LinearLayout>
 
-        <!-- Thur -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,8 +126,6 @@
                 android:gravity="center" />
         </LinearLayout>
 
-
-        <!-- Friday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -150,7 +152,6 @@
                 android:gravity="center" />
         </LinearLayout>
 
-        <!-- Continue for Saturday and Sunday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -203,5 +204,7 @@
                 android:gravity="center" />
         </LinearLayout>
 
+    </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
